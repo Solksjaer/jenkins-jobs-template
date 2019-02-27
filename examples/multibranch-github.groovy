@@ -4,6 +4,9 @@ multibranchPipelineJob('image-jenkins') {
       scanCredentialsId('github')
       repoOwner('CloudiFire')
       repository('image-jenkins')
+      buildOriginBranchWithPR(false)
+      buildOriginPRMerge(true)
+      buildForkPRMerge(true)
     }
   }
   orphanedItemStrategy {
