@@ -15,6 +15,6 @@ multibranchPipelineJob('image-jenkins') {
     }
   }
   triggers {
-    periodic(5)
+    cron('@hourly')
   }
 } 
