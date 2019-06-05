@@ -14,7 +14,4 @@ multibranchPipelineJob('image-jenkins') {
       numToKeep(1)
     }
   }
-  triggers {
-    cron('@hourly')
-  }
 } 
