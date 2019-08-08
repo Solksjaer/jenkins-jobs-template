@@ -1,8 +1,10 @@
 multibranchPipelineJob('image-jenkins') {
   branchSources {
     github {
+      // must not be empty but unique per branchSource
+      id('image-jenkins')
       scanCredentialsId('github')
-      repoOwner('CloudiFire')
+      repoOwner('syncier')
       repository('image-jenkins')
       buildOriginBranchWithPR(false)
       buildOriginPRMerge(true)
