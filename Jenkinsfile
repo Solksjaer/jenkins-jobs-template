@@ -1,4 +1,10 @@
 pipeline {
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '35'))
+        disableConcurrentBuilds()
+        timestamps()
+        ansiColor('xterm')
+    }
     agent any
     stages {
         stage('configure jobs') {
